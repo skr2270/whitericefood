@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <?php include 'includes/header.php'; ?>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrQkTyTyABn5xB7+ZOVpHl0KqP8tG1p+4jGpv1LFWp59NodAkbJsvJQ/UJp1zI7AxuXhV19qqnh/WaJ50A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="bg-gray-100">
     <?php include 'includes/nav.php'; ?>
@@ -73,10 +74,16 @@
             </div>
         </section>
 
-        <section id="locations" class="text-center bg-white py-16">
-            <h2 class="text-3xl font-semibold mb-8">Find our locations</h2>
-            <p class="max-w-3xl mx-auto mb-6 px-4">Serving fresh fish daily at Boston Harbor Islands, Boylston St, Congress St, Kendall Square, Cambridge St, Haviland St.</p>
-            <a href="#" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded">Locations & Hours</a>
+        <section id="usage" class="text-center bg-white py-16">
+            <h2 class="text-3xl font-semibold mb-8">How to Use & Process of Fortification</h2>
+            <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="flex justify-center items-center bg-white p-6 rounded-lg shadow-md">
+                    <img src="assets/images/usage.jpg" alt="How to Use" class="w-full h-auto rounded-lg cursor-pointer" id="img1" style="max-height: 450px;">
+                </div>
+                <div class="flex justify-center items-center bg-white p-6 rounded-lg shadow-md">
+                    <img src="assets/images/Process of Fortification.jpg" alt="Process of Fortification" class="w-full h-auto rounded-lg cursor-pointer" id="img2" style="max-height: 450px;">
+                </div>
+            </div>
         </section>
 
         <section id="social" class="text-center py-16">
@@ -86,11 +93,37 @@
                 <a href="https://www.instagram.com/white_rice_food?igsh=MXdtN2VkNnlzYmUwYw%3D%3D&utm_source=qr" class="text-2xl" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.facebook.com/profile.php?id=61557930563514&mibextid=LQQJ4d" class="text-2xl" target="_blank"><i class="fab fa-facebook"></i></a>
                 <a href="https://youtube.com/@white_rice_food?si=YEptMnYDn47XNpe8" class="text-2xl" target="_blank"><i class="fab fa-youtube"></i></a>
-                <a href="https://x.com/?lang=en" class="text-2xl" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://x.com/whitericefood" class="text-2xl" target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
         </section>
     </main>
+
+    <!-- Modal -->
+    <div id="modal1" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden">
+        <span class="text-white absolute top-0 right-0 p-4 cursor-pointer text-3xl" id="close1">&times;</span>
+        <img class="max-w-full max-h-full" src="assets/images/usage.jpg" alt="How to Use">
+    </div>
+
+    <div id="modal2" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden">
+        <span class="text-white absolute top-0 right-0 p-4 cursor-pointer text-3xl" id="close2">&times;</span>
+        <img class="max-w-full max-h-full" src="assets/images/Process of Fortification.jpg" alt="Process of Fortification">
+    </div>
+
     <?php include 'includes/footer.php'; ?>
     <script src="assets/js/menu-toggle.js"></script>
+    <script>
+        document.getElementById('img1').onclick = function() {
+            document.getElementById('modal1').classList.remove('hidden');
+        }
+        document.getElementById('close1').onclick = function() {
+            document.getElementById('modal1').classList.add('hidden');
+        }
+        document.getElementById('img2').onclick = function() {
+            document.getElementById('modal2').classList.remove('hidden');
+        }
+        document.getElementById('close2').onclick = function() {
+            document.getElementById('modal2').classList.add('hidden');
+        }
+    </script>
 </body>
 </html>
