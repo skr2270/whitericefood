@@ -1,3 +1,4 @@
+<?php include 'config.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
 </head>
 <body class="bg-gray-100">
     <?php include 'includes/nav.php'; ?>
-    <header class="relative bg-cover bg-center py-32 text-center text-white custom-hero" style="background-image: url('assets/images/hero.jpg');">
+    <header class="relative bg-cover bg-center py-32 text-center text-white custom-hero" style="background-image: url('<?php echo $base_url; ?>/assets/images/hero.jpg');">
         <div class="absolute inset-0 bg-black opacity-50"></div>
         <div class="relative z-10 max-w-3xl mx-auto">
             <h1 class="text-5xl font-bold">White Rice Food</h1>
@@ -21,10 +22,10 @@
                 <div class="md:w-1/2 mb-6 md:mb-0">
                     <p>Welcome to White Rice Food, a pioneering manufacturer at the forefront of nutritional innovation, specializing in the production of fortified foods. Based in Telangana, India, White Rice Food is dedicated to combating malnutrition and enhancing food security by enriching staple foods with essential vitamins and minerals.</p>
                     <p>Our mission is to make nutritional foods accessible and affordable for all, particularly in regions where micronutrient deficiencies are prevalent. By partnering with governments, NGOs, and food distributors, we strive to reach millions of people, providing a simple yet effective solution to improve public health outcomes.</p>
-                    <a href="/wrf/about.php" class="mt-4 inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded">Know More</a>
+                    <a href="<?php echo $base_url; ?>/about.php" class="mt-4 inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded">Know More</a>
                 </div>
                 <div class="md:w-1/2">
-                    <img src="assets/images/about.jpg" alt="About Us" class="w-full h-auto rounded-lg shadow-md">
+                    <img src="<?php echo $base_url; ?>/assets/images/about.jpg" alt="About Us" class="w-full h-auto rounded-lg shadow-md">
                 </div>
             </div>
         </section>
@@ -33,19 +34,19 @@
             <h2 class="text-3xl font-semibold mb-8">Products</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
                 <div class="bg-white p-6 border rounded-lg shadow-md">
-                    <img src="assets/images/FRK.jpeg" alt="FRK" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <img src="<?php echo $base_url; ?>/assets/images/FRK.jpeg" alt="FRK" class="w-full h-48 object-cover rounded-lg mb-4">
                     <h3 class="text-xl font-bold mb-2">FRK (Fortified Rice Kernels)</h3>
                     <p class="mb-4">Each grain is specially extruded and enriched with Iron, Folic Acid, and Vitamin B12.</p>
                     <a href="#" class="px-6 py-2 bg-blue-600 text-white font-semibold rounded">Order Now</a>
                 </div>
                 <div class="bg-white p-6 border rounded-lg shadow-md">
-                    <img src="assets/images/Rawa-Blend.jpeg" alt="NutriRawa" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <img src="<?php echo $base_url; ?>/assets/images/Rawa-Blend.jpeg" alt="NutriRawa" class="w-full h-48 object-cover rounded-lg mb-4">
                     <h3 class="text-xl font-bold mb-2">NutriRawa</h3>
                     <p class="mb-4">Our Rawa Blend combines the graininess of semolina with essential nutrients like Iron, Folic Acid, and B Vitamins.</p>
                     <a href="#" class="px-6 py-2 bg-blue-600 text-white font-semibold rounded">Order Now</a>
                 </div>
                 <div class="bg-white p-6 border rounded-lg shadow-md">
-                    <img src="assets/images/NutriFlour.jpeg" alt="NutriFlour" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <img src="<?php echo $base_url; ?>/assets/images/NutriFlour.jpeg" alt="NutriFlour" class="w-full h-48 object-cover rounded-lg mb-4">
                     <h3 class="text-xl font-bold mb-2">NutriFlour</h3>
                     <p class="mb-4">Finely Milled Flour with essential nutrients like Iron, Folic Acid, and Vitamin B12.</p>
                     <a href="#" class="px-6 py-2 bg-blue-600 text-white font-semibold rounded">Order Now</a>
@@ -57,18 +58,18 @@
             <h2 class="text-3xl font-semibold mb-8">Latest Blog Posts</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
                 <article class="bg-white p-6 rounded-lg shadow-md">
-                    <img src="assets/images/blogs/food-fortification.webp" alt="Food Fortification" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-2xl font-bold mb-2"><a href="blogs/post.php?id=food-fortification" class="text-blue-600">Food Fortification</a></h3>
+                    <img src="<?php echo $base_url; ?>/assets/images/blogs/food-fortification.webp" alt="Food Fortification" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-2xl font-bold mb-2"><a href="<?php echo $base_url; ?>/blogs/post.php?id=food-fortification" class="text-blue-600">Food Fortification</a></h3>
                     <p>Food fortification is the process of adding essential vitamins and minerals to foods...</p>
                 </article>
                 <article class="bg-white p-6 rounded-lg shadow-md">
-                    <img src="assets/images/blogs/frk.webp" alt="WHAT ARE FORTIFIED RICE KERNELS" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-2xl font-bold mb-2"><a href="blogs/post.php?id=fortified-rice-kernels" class="text-blue-600">WHAT ARE FORTIFIED RICE KERNELS</a></h3>
+                    <img src="<?php echo $base_url; ?>/assets/images/blogs/frk.webp" alt="WHAT ARE FORTIFIED RICE KERNELS" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-2xl font-bold mb-2"><a href="<?php echo $base_url; ?>/blogs/post.php?id=fortified-rice-kernels" class="text-blue-600">WHAT ARE FORTIFIED RICE KERNELS</a></h3>
                     <p>Fortified rice kernels are specially processed rice grains enhanced with essential vitamins and minerals...</p>
                 </article>
                 <article class="bg-white p-6 rounded-lg shadow-md">
-                    <img src="assets/images/blogs/difference.webp" alt="WHITE RICE vs FORTIFIED RICE" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-2xl font-bold mb-2"><a href="blogs/post.php?id=white-vs-fortified-rice" class="text-blue-600">WHITE RICE vs FORTIFIED RICE</a></h3>
+                    <img src="<?php echo $base_url; ?>/assets/images/blogs/difference.webp" alt="WHITE RICE vs FORTIFIED RICE" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-2xl font-bold mb-2"><a href="<?php echo $base_url; ?>/blogs/post.php?id=white-vs-fortified-rice" class="text-blue-600">WHITE RICE vs FORTIFIED RICE</a></h3>
                     <p>Here’s a detailed comparison of white rice and fortified rice in terms of their nutritional content, health benefits, and other key aspects...</p>
                 </article>
             </div>
@@ -78,10 +79,10 @@
             <h2 class="text-3xl font-semibold mb-8">How to Use & Process of Fortification</h2>
             <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="flex justify-center items-center bg-white p-6 rounded-lg shadow-md">
-                    <img src="assets/images/usage.jpg" alt="How to Use" class="w-full h-auto rounded-lg cursor-pointer" id="img1" style="max-height: 450px;">
+                    <img src="<?php echo $base_url; ?>/assets/images/usage.jpg" alt="How to Use" class="w-full h-auto rounded-lg cursor-pointer" id="img1" style="max-height: 450px;">
                 </div>
                 <div class="flex justify-center items-center bg-white p-6 rounded-lg shadow-md">
-                    <img src="assets/images/Process of Fortification.jpg" alt="Process of Fortification" class="w-full h-auto rounded-lg cursor-pointer" id="img2" style="max-height: 450px;">
+                    <img src="<?php echo $base_url; ?>/assets/images/Process of Fortification.jpg" alt="Process of Fortification" class="w-full h-auto rounded-lg cursor-pointer" id="img2" style="max-height: 450px;">
                 </div>
             </div>
         </section>
@@ -101,16 +102,15 @@
     <!-- Modal -->
     <div id="modal1" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden">
         <span class="text-white absolute top-0 right-0 p-4 cursor-pointer text-3xl" id="close1">&times;</span>
-        <img class="max-w-full max-h-full" src="assets/images/usage.jpg" alt="How to Use">
+        <img class="max-w-full max-h-full" src="<?php echo $base_url; ?>/assets/images/usage.jpg" alt="How to Use">
     </div>
 
     <div id="modal2" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden">
         <span class="text-white absolute top-0 right-0 p-4 cursor-pointer text-3xl" id="close2">&times;</span>
-        <img class="max-w-full max-h-full" src="assets/images/Process of Fortification.jpg" alt="Process of Fortification">
+        <img class="max-w-full max-h-full" src="<?php echo $base_url; ?>/assets/images/Process of Fortification.jpg" alt="Process of Fortification">
     </div>
 
-    <?php include 'includes/footer.php'; ?>
-    <script src="assets/js/menu-toggle.js"></script>
+    <script src="<?php echo $base_url; ?>/assets/js/menu-toggle.js"></script>
     <script>
         document.getElementById('img1').onclick = function() {
             document.getElementById('modal1').classList.remove('hidden');
