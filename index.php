@@ -5,8 +5,8 @@
 </head>
 <body class="bg-gray-100">
     <?php include 'includes/nav.php'; ?>
-    <header class="relative bg-cover bg-center py-32 text-center text-white mx-4 rounded-lg" style="background-image: url('assets/images/hero.jpg');">
-        <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+    <header class="relative bg-cover bg-center py-32 text-center text-white custom-hero" style="background-image: url('assets/images/hero.jpg');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
         <div class="relative z-10 max-w-3xl mx-auto">
             <h1 class="text-5xl font-bold">White Rice Food</h1>
             <p class="mt-4 text-xl">Pioneering Nutritional Innovation</p>
@@ -14,19 +14,20 @@
         </div>
     </header>
     <main class="py-16">
-        <section id="about" class="py-16 bg-white flex flex-col items-center">
-            <h2 class="text-3xl font-semibold mb-8 text-center">About Us</h2>
-            <div class="flex flex-col md:flex-row justify-center items-center max-w-5xl mx-auto px-4">
-                <div class="md:w-1/2 mb-8 md:mb-0 text-center md:text-left">
-                    <p class="mb-4">Welcome to White Rice Food, a pioneering manufacturer at the forefront of nutritional innovation.</p>
-                    <p class="mb-4">Our mission is to make nutritional foods accessible and affordable for all.</p>
-                    <a href="about.php" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded">Know More</a>
+        <section id="about" class="text-center px-4">
+            <h2 class="text-3xl font-semibold mb-8">About Us</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center max-w-6xl mx-auto">
+                <div class="md:w-1/2 mb-6 md:mb-0">
+                    <p>Welcome to White Rice Food, a pioneering manufacturer at the forefront of nutritional innovation, specializing in the production of fortified foods. Based in Telangana, India, White Rice Food is dedicated to combating malnutrition and enhancing food security by enriching staple foods with essential vitamins and minerals.</p>
+                    <p>Our mission is to make nutritional foods accessible and affordable for all, particularly in regions where micronutrient deficiencies are prevalent. By partnering with governments, NGOs, and food distributors, we strive to reach millions of people, providing a simple yet effective solution to improve public health outcomes.</p>
+                    <a href="/wrf/about.php" class="mt-4 inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded">Know More</a>
                 </div>
                 <div class="md:w-1/2">
-                    <img src="assets/images/about.jpg" alt="About Us" class="w-full h-64 object-cover rounded-lg shadow-md">
+                    <img src="assets/images/about.jpg" alt="About Us" class="w-full h-auto rounded-lg shadow-md">
                 </div>
             </div>
         </section>
+
         <section id="products" class="text-center bg-white py-16">
             <h2 class="text-3xl font-semibold mb-8">Products</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
@@ -50,18 +51,34 @@
                 </div>
             </div>
         </section>
-        <section id="customers" class="text-center py-16">
-            <h2 class="text-3xl font-semibold mb-8">Our happy customers</h2>
-            <div class="max-w-3xl mx-auto px-4">
-                <p class="mb-4">"I'm a big fan of poke bowls, and this place definitely delivers. The quality of the ingredients is top-notch, and the variety of toppings allows you to customize your bowl." - Lauren Martinez</p>
-                <img src="assets/images/customer1.jpg" alt="Customer" class="w-20 h-20 rounded-full mx-auto">
+
+        <section id="blog-posts" class="text-center py-16">
+            <h2 class="text-3xl font-semibold mb-8">Latest Blog Posts</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
+                <article class="bg-white p-6 rounded-lg shadow-md">
+                    <img src="assets/images/blogs/food-fortification.webp" alt="Food Fortification" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-2xl font-bold mb-2"><a href="blogs/post.php?id=food-fortification" class="text-blue-600">Food Fortification</a></h3>
+                    <p>Food fortification is the process of adding essential vitamins and minerals to foods...</p>
+                </article>
+                <article class="bg-white p-6 rounded-lg shadow-md">
+                    <img src="assets/images/blogs/frk.webp" alt="WHAT ARE FORTIFIED RICE KERNELS" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-2xl font-bold mb-2"><a href="blogs/post.php?id=fortified-rice-kernels" class="text-blue-600">WHAT ARE FORTIFIED RICE KERNELS</a></h3>
+                    <p>Fortified rice kernels are specially processed rice grains enhanced with essential vitamins and minerals...</p>
+                </article>
+                <article class="bg-white p-6 rounded-lg shadow-md">
+                    <img src="assets/images/blogs/difference.webp" alt="WHITE RICE vs FORTIFIED RICE" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-2xl font-bold mb-2"><a href="blogs/post.php?id=white-vs-fortified-rice" class="text-blue-600">WHITE RICE vs FORTIFIED RICE</a></h3>
+                    <p>Here’s a detailed comparison of white rice and fortified rice in terms of their nutritional content, health benefits, and other key aspects...</p>
+                </article>
             </div>
         </section>
+
         <section id="locations" class="text-center bg-white py-16">
             <h2 class="text-3xl font-semibold mb-8">Find our locations</h2>
             <p class="max-w-3xl mx-auto mb-6 px-4">Serving fresh fish daily at Boston Harbor Islands, Boylston St, Congress St, Kendall Square, Cambridge St, Haviland St.</p>
             <a href="#" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded">Locations & Hours</a>
         </section>
+
         <section id="social" class="text-center py-16">
             <h2 class="text-3xl font-semibold mb-8">Follow us</h2>
             <div class="flex justify-center space-x-4">
