@@ -14,7 +14,7 @@ include $rootPath . '/config.php';
             <li><a href="<?php echo $base_url; ?>/about.php" class="text-black hover:text-blue-600">About Us</a></li>
             <li><a href="<?php echo $base_url; ?>/contact.php" class="text-black hover:text-blue-600">Contact Us</a></li>
             <li><a href="<?php echo $base_url; ?>/blogs/blog.php" class="text-black hover:text-blue-600">Blog</a></li>
-            <li><a href="<?php echo $base_url; ?>/products.php" class="text-black hover:text-blue-600">Products</a></li>
+            <li><a href="<?php echo $base_url; ?>/products/products.php" class="text-black hover:text-blue-600">Products</a></li>
         </ul>
         <div class="flex space-x-4">
             <a href="#" class="text-2xl text-black hover:text-blue-600"><i class="fas fa-shopping-cart"></i></a>

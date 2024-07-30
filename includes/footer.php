@@ -3,9 +3,9 @@
         <p>&copy; 2024 White Rice Food. All rights reserved.</p>
         <nav class="mt-4">
             <ul class="flex justify-center space-x-4">
-                <li><a href="index.php" class="text-white">Home</a></li>
-                <li><a href="about.php" class="text-white">Our story</a></li>
-                <li><a href="contact.php" class="text-white">Contact</a></li>
+                <li><a href="<?php echo $base_url; ?>/index.php" class="text-white">Home</a></li>
+                <li><a href="<?php echo $base_url; ?>/about.php" class="text-white">Our story</a></li>
+                <li><a href="<?php echo $base_url; ?>/contact.php" class="text-white">Contact</a></li>
             </ul>
         </nav>
         <div class="mt-4">

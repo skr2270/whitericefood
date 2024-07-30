@@ -1,6 +1,7 @@
 <?php
-include '../includes/header.php';
-include '../includes/nav.php';
+include dirname(__DIR__) . '/config.php';
+include $rootPath . '/includes/header.php';
+include $rootPath . '/includes/nav.php';
 
 $posts = [
     'food-fortification' => [
@@ -91,9 +92,13 @@ $posts = [
     ]
 ];
 
-$id = $_GET['id'];
+$id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_SPECIAL_CHARS);
+if (!isset($posts[$id])) {
+    // Handle invalid ID
+    echo "Invalid blog post ID.";
+    exit;
+}
 $post = $posts[$id];
-
 ?>
 
 <main class="py-16">
@@ -106,7 +111,7 @@ $post = $posts[$id];
     </section>
 </main>
 
-<?php include '../includes/footer.php'; ?>
-<script src="../assets/js/menu-toggle.js"></script>
+<?php include $rootPath . '/includes/footer.php'; ?>
+<script src="<?php echo $base_url; ?>/assets/js/menu-toggle.js"></script>
 </body>
 </html>

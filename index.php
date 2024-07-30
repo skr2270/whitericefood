@@ -109,7 +109,7 @@
         <span class="text-white absolute top-0 right-0 p-4 cursor-pointer text-3xl" id="close2">&times;</span>
         <img class="max-w-full max-h-full" src="<?php echo $base_url; ?>/assets/images/Process of Fortification.jpg" alt="Process of Fortification">
     </div>
-
+    <?php include $rootPath . '/includes/footer.php'; ?>
     <script src="<?php echo $base_url; ?>/assets/js/menu-toggle.js"></script>
     <script>
         document.getElementById('img1').onclick = function() {
